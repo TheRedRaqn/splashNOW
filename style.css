@@ -92,23 +92,23 @@ header h1 {
     margin: 0 auto;
 }
 
+/* Social Bar (Common styles) */
 .socials-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%; 
-    background-color: #333;
-    padding: 10px 0; /* Top and bottom padding */
+    padding: 10px 0;
     display: flex;
-    justify-content: center; /* Centers content horizontally */
+    justify-content: center;
     align-items: center;
     gap: 15px;
     z-index: 1000;
+	background-color: #ffffff; /* white background for light mode */
 }
 
 .socials-bar span {
-    color: #ffffff;
     font-size: 16px;
     margin-right: 10px;
 }
@@ -128,7 +128,7 @@ header h1 {
 }
 
 .socials-bar .follow-text {
-    color: #ffffff; /* white color */
+    color: #000000; /* black color for light mode */
     font-size: 16px;
     margin-right: -14px; /* Negative margin to reduce space */
 }
@@ -139,6 +139,16 @@ header h1 {
     font-weight: bold; /* Bold font for RAQN */
 }
 
+/* Dark Mode adjustments for social bar */
+.dark-mode .socials-bar {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .socials-bar .follow-text, 
+.dark-mode .socials-bar a,
+.dark-mode .socials-bar img {
+    color: #f4f4f4;
+}
 
 /* For desktop layout */
 @media (min-width: 768px) {
